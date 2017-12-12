@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><title>1.float</title>
+<meta charset="utf-8">
+<style type="text/css">
+    /* 초기설정 */
+    *{margin:0;padding:0;}
+    li{list-style-type:none;}
+    a{text-decoration: none;color:#fff;}
+    p{margin-bottom:20px;}
+    body{
+        background:#6f866c;
+        background-image: url("images/g6.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;/* 백그라운드의 사이즈 지정 */
+        /*background-attachment: fixed;*/
+        font-family: 'adobe Gothic std';
+        font-weight: 800;
+        }
+    .center{width:1000px; margin:0 auto;}
+
+    /* 머리글 */
+    header{
+           /*background: rgba(255, 255, 255, 0.7);*/
+           /*background: #fbfbfb;*/
+           background-image: url("images/640x640.jpg");
+           background-repeat: no-repeat;
+           /*background-size: cover;*/
+           background-position: 120px 1px;
+           height: 315px;
+    }
+
+    header h1{
+              text-align: right; padding:10px 0; color: #ffcc99 ;
+              font-size: 80px;
+              }
+    header h4{text-align:right;color: rgb(168, 167, 167)}
+    header{text-align: center;}
+    header img{width: 92px;}
+
+    /* 본문 */
+    section{background:rgba(255, 255, 255, 0.5); overflow: hidden;}
+
+    nav{position:relative;float: left;}
+    nav li a{display:block; border-bottom:2px solid #fff; padding: 20px ;
+            background: #ffcc99; width:70px;}
+    nav li a:hover{background: #3fc3b8;color: #ffcc99;}
+
+    article{margin-left: 120px;}
+    article .wrap{padding:20px;
+                  background:rgba(14, 13, 14, 0.45);}
+    article .wrap .gallery1 ul{overflow: hidden;}
+    article .wrap .gallery1 ul li{float: left; width: 25%;}
+    article .wrap .gallery1 ul li img{margin-right: 20px; padding: 35px; background-color: rgb(255, 255, 255)}
+
+    article .wrap .gallery2 ul li img{width: 100px;padding: 100px;}
+    article .wrap .gallery2 ul li{border-radius: 30px; width: 300px; height: 330px;}
+                  .play1{background-color: #f6d6b6;}
+    article .wrap .gallery3 ul{overflow: hidden;}
+    article .wrap .gallery3 ul li{float: left; width:33.33%;}
+
+    article .wrap h1:hover{color: #3fc3b8;}
+
+
+
+
+    /* 바닥글 */
+    footer{clear:left; background:#ffcc99;color:#fff;text-align: center;
+           padding:30px 0;}
+</style>
+</head>
+<body>
+    <div class="center">
+        <header>
+            <h1>GIFT
+             <img src="images/logo.png" alt="로고이미지"></h1>
+            <h4>www.koreagift.com</h4>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">감사선물</a></li>
+                    <li><a href="#">축하선물</a></li>
+                    <li><a href="#">기념선물</a></li>
+                    <li><a href="#">기원선물</a></li>
+                </ul>
+            </nav>
+            <article>
+              <div class="wrap">
+                <div class="gallery1">
+                  <h1>이슈선물</h1>
+                  <ul>
+                    <li><img src="images/issueimg01.jpg" alt="이슈선물01"></li>
+                    <li><img src="images/issueimg02.jpg" alt="이슈선물02"></li>
+                    <li><img src="images/issueimg03.jpg" alt="이슈선물03"></li>
+                    <li><img src="images/issueimg04.jpg" alt="이슈선물04"></li>
+                  </ul>
+                </div>
+
+                <div class="gallery2">
+                  <h1>참고영상</h1>
+                  <ul>
+                    <li class="play1"><img src="images/playimages.png" alt="동영상화살표"></li>
+                  </ul>
+                </div>
+
+                <div class="gallery3">
+                  <h1>참고사이트</h1>
+                  <ul>
+                    <li><img src="images/banner1.png" alt="배너이미지1"></li>
+                    <li><img src="images/banner2.png" alt="배너이미지2"></li>
+                    <li><img src="images/banner3.png" alt="배너이미지3"></li>
+                    <li><img src="images/banner5.png" alt="배너이미지5"></li>
+                    <li><img src="images/banner6.png" alt="배너이미지6"></li>
+                    <li><img src="images/banner7.png" alt="배너이미지7"></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+        </section>
+        <footer>
+            Copyright &copy; All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
