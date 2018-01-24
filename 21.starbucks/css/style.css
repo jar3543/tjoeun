@@ -1,0 +1,280 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+/* reset ================================================== */
+*{margin: 0; padding: 0;}
+label, span{display: inline-block;}
+li{list-style: none;}
+a{text-decoration: none; display: inline-block; color:#000;}
+img{max-width: 100%;}
+.skip{font-size: 0;text-indent: -99999px;position: absolute;left: -99999px;}
+.text-overflow{text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+body{font-family: 'Open Sans', sans-serif;}
+
+/* header ================================================== */
+header{position: fixed; width: 100%; z-index: 1;}
+header .title{
+  position: relative; height: 70px;
+  background: #007042; z-index: 2;
+}
+header .title h1{
+  text-align: center;
+  line-height: 70px; color:#fff; font-size: 1.5em;
+}
+
+
+/* 멤버쉽 */
+.btn-member{
+  position: absolute;
+  top: 20px; right: 20px;
+  color: #fff;
+  z-index: 3;
+  font-size: 25px;
+}
+.btn-member::after{content:'\f006';}
+/* 멤버쉽체크박스(별 아이콘과 연동) 감추기 */
+#btn-member{display: none;}
+#btn-member:checked + .btn-member::after{content:'\f005';}
+
+.member-nav{
+  width: 100%; height:0;
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+}
+.member-nav .wrap{padding: 20px 0; margin: 0 20px;}
+.member-nav p{font-size: 12px;}
+.member-nav strong{display: block;}
+.member-nav .btn-group{margin-top: 20px;}
+.member-nav .btn-group button{
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+.member-nav .btn-group button:hover{
+  background: #fff; color: #111;
+}
+
+
+/* 검색 */
+form.search input{
+  width: 180px; height: 30px;
+  text-indent: 10px;/*text 들여쓰기*/
+  float: left;
+  border: 0;
+}
+form.search button{
+  width: 30px; height: 30px;
+  border: 0;
+  background: #007042;
+  color: #fff;
+  font-family: FontAwesome;/*폰트패밀리지정 or 폰트 값 써줌(i)*/
+
+}
+form.search button::after{
+  content:"\f002";
+  /*/--click->달러*/
+}
+/* 메뉴토글버튼을 제어하는 체크박스 숨기기 */
+#btn-menu{display: none;}
+
+
+/* 네비게이션 */
+nav{background: #2c2a29;
+
+}
+.gnb-nav{}
+.gnb-nav > li > a{
+  position: relative;
+  color: #eee;
+  display: block;
+  padding: 20px;
+}
+.gnb-nav > li > a::after{/*마우스올렸을 때 아이콘이 바뀜*/
+  position: absolute;
+  right: 20px;/*아이콘 위치*/
+  font-family: FontAwesome;
+  content:"\f078";/*아이콘*/
+}
+.gnb-nav > li:hover > a{background: #000;}
+.gnb-nav > li:hover > a::after{content:"\f2d1";}/*마우스올렸을 때 아이콘이 바뀜*/
+/* 2depth메뉴 */
+.gnb-nav li ul{
+  height: 0px;/*서브메뉴를 숨긴 효과*/
+  overflow: hidden;
+  padding-left: 20px;
+}
+.gnb-nav li ul li a{
+  display: block;
+  line-height: 30px;
+}
+.gnb-nav li ul li a sup{font-size: 10px;}
+.gnb-nav li:nth-child(1):hover ul{height: 97px;}/*서브메뉴를 나타내는 효과*/
+.gnb-nav li:nth-child(2):hover ul{height: 124px;}
+.gnb-nav li:nth-child(3):hover ul{height: 97px;}
+.gnb-nav li:nth-child(4):hover ul{height: 62px;}
+
+.util-nav li a{
+  display: block;
+  text-align: right;/*오른쪽에 배치*/
+  color: #a5a5a5;
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+
+/* gnb-nav */
+.gnb-nav li ul li a{
+  color: #aaa;
+  border-bottom: 1px solid transparent;/*부드럽게 효과*/
+}
+.gnb-nav li ul li a:hover{
+  border-bottom: 1px solid #fff;
+}
+
+/*===========================================================================*/
+
+/* 모바일 */
+@media (max-width:767px){
+  .btn-menu *, nav, nav *{transition: all 0.5s;}
+  .btn-menu{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 30px;
+    width: 25px;
+    z-index: 3;
+  }
+  .btn-menu span{
+    width: 25px; height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 4px;
+    transform-origin: -2px 1px;
+  }
+  .btn-menu span:nth-child(1){bottom: 4px; top: auto;}
+  .btn-menu span:nth-child(2){top: 50%; margin-top: -1px;}
+  #btn-menu:checked + label span:nth-child(1){transform: rotate(-45deg);}
+  #btn-menu:checked + label span:nth-child(2){opacity: 0;}
+  #btn-menu:checked + label span:nth-child(3){transform: rotate(45deg);}
+
+/* nav */
+nav{
+  position: fixed;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #2c2a29;
+/* 숨김 */
+  left: -250px;
+  overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
+}
+#btn-menu:checked ~ nav{left: 0;}
+#btn-menu:checked ~ nav::after{
+  content:'';
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+/* form(search) */
+form.search{
+  padding: 90px 20px 20px;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+
+/* gnb-nav */
+.gnb-nav li ul li a{
+  color: #aaa;
+  border-bottom: 1px solid transparent;/*부드럽게 효과*/
+}
+.gnb-nav li ul li a:hover{
+  border-bottom: 1px solid #fff;
+}
+
+/* member */
+.member-nav > div:nth-child(1) .wrap{
+  border-bottom: 1px solid #fff;
+}
+.member-nav .wrap{
+  max-width: 350px;
+  margin: auto;
+}
+.member-nav .wrap>div:nth-child(2) > *{
+  padding-left: 10px;
+}
+#btn-member:checked ~ .member-nav{
+  height: 328px;
+}
+
+}
+
+
+
+
+/* 테블릿이상 */
+@media (min-width:768px) {
+  header .title{
+    background: #f6f5ef;
+    padding: 20px;
+    height: auto;
+    z-index: initial;/*초기화*/
+  }
+  header .title h1{
+    text-align: left; color: #007042;
+  }
+  header .title h1::before{
+    content:'';
+    display: inline-block;
+    background: url(../images/logo.png) no-repeat;
+    width: 75px; height: 75px;
+    vertical-align: middle;padding-right: 10px;
+  }
+  /* 검색 */
+  form.search{
+    position: absolute;
+    top: 40px; left: 50%; transform: translateX(-50%);
+    z-index: 3;
+  }
+  form.search input{
+    background: #007042; color: #fff;
+  }
+
+  /* 토글메뉴버튼 숨기기 */
+  .btn-menu{display: none;}
+
+  /* gnb-nav */
+  .gnb-nav *{transition: height 0.5s, background 0.5s; }
+  /* 1depth */
+  .gnb-nav > li{float: left; width: 25%;}
+  .gnb-nav > li > a{background: #007042;}
+  /* 2depth */
+  .gnb-nav li ul{background: #f6f5ef;}
+  .gnb-nav li ul li a{color: #000;}
+  .gnb-nav li ul li a:hover{color: right:0;}
+
+  /* util-nav */
+  .util-nav{position: absolute;top: 0; right: 0;}
+  .util-nav li{float: left;}
+
+/* member */
+.member-nav{position: absolute;}
+.member-nav > div{
+  height: 180px;
+  box-sizing: border-box;
+}
+.member-nav > div:nth-child(1){
+  border-right: 1px solid #fff;
+}
+#btn-member:checked ~ .member-nav{
+  height: 175px;
+}
+.btn-member{
+  top: 45px; color: #007042;
+}
+
+
+}
