@@ -1,0 +1,5 @@
+>>githup
+githup폴더안에 파일을 넣고
+commit to master클릭 후
+상단에 push클릭하고
+홈페이지에서 확인
