@@ -59,5 +59,15 @@ $(function(){//시작
     alert('로그아웃');
   })
 
+  // //네비게이션 focusin/focusout
+    $('.gnb-nav li a').on('focusin',function(){
+      $('.gnb-nav li ul').show();
+      $('.gnb-nav .nav-bg').show();
+    $('.gnb-nav li a').on('focusout',function(){
+      $('.gnb-nav li ul').hide();
+      $('.gnb-nav .nav-bg').hide();
+    })
+  })
+
 
 })//종료
