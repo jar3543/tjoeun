@@ -389,7 +389,7 @@ header .center #btn-login div.popup-icon-shop dl.order button:nth-of-type(2){
   border-radius: 10px;
   border: 1px solid #000;
 }
-.login-popup-hover .login-hover .popup-login .login-button button.black{color: #fff;background: #000;!important}
+.login-popup-hover .login-hover .popup-login .login-button button.black{color: #fff;background: #000 !important;}
 .login-button button:nth-child(2){color: #000;background: #fff;}
 .login-popup-hover .login-hover .popup-login .login-button{}
 /* 팝업 백그라운드 */
