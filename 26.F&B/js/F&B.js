@@ -1,25 +1,37 @@
 $(function(){//시작
-  var $deWidth;
+  var $devWidth;
   var $limitSize=767;
 
   $(window).resize(function(){
-    $devWidth=
-
-  // 상품 갤러리 슬라이드
-    productSlide=new Swiper('.product-slide',{
-      navigation:{
-        nextEl:'.product-slide .swiper-button-next',
-        prevEl:'.product-slide .swiper-button-prev',
-      },
-      slidesPerView:4,
-      loop:true,
-    });
-  })
+    $devWidth=$('body').width();
+    console.log($devWidth);
+    if($devWidth<$limitSize){//모바일
+      // 상품 갤러리 슬라이드
+      productSlide=new Swiper('.product-slide',{
+        navigation:{
+          nextEl:'.product-slide .swiper-button-next',
+          prevEl:'.product-slide .swiper-button-prev',
+        },
+        slidesPerView:2,
+        loop:true,
+      });
+    }else{
+      // 상품 갤러리 슬라이드
+      productSlide=new Swiper('.product-slide',{
+        navigation:{
+          nextEl:'.product-slide .swiper-button-next',
+          prevEl:'.product-slide .swiper-button-prev',
+        },
+        slidesPerView:3,
+        loop:true,
+      });
+    }
+  }).resize();
 
   // 로그인팝업
   $('.login-hover').on('click',function(){
     // console.log('로그인팝업열기')
-    $('.popup-login, .popup-bg').stop().show();//css로적용시킨것
+    $('.popup-login, .popup-bg').stop().show();
       // 로그인팝업닫기
       $('.popup-login').on('mouseleave',function(){
         // console.log('로그인팝업닫기')
@@ -46,20 +58,6 @@ $(function(){//시작
     $('.textchange').text('My page 로그아웃');
     alert('로그아웃');
   })
-
-  //슬라이드 메인이미지
-  var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 2,
-  slidesPerColumn: 2,
-  spaceBetween: 0,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});.resize();
-
-
-
 
 
 })//종료
