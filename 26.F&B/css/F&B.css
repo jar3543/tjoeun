@@ -149,7 +149,6 @@ section{}
   display: inline-block;
   background-size: cover;
 }
-.event .event-wrap .app-event a{}
 .event .event-wrap .app-event a img{
   position: relative;
   top: 46px;
@@ -176,7 +175,6 @@ section{}
   cursor: pointer;
   padding-top: 100px;
   font-size: 15px;}
-.event .event-wrap .off-event a{}
 .event .event-wrap .off-event a img{padding-top: 75px;}
 .event .event-wrap .off-event li{
   text-align: center;
@@ -190,8 +188,6 @@ section{}
 /* magazine */
 .magazine{background: #333333;height: 550px;position: relative;text-align: center;}
 .magazine h1{padding-bottom: 80px;padding-top: 50px;}
-.magazine h1 a{}
-.magazine h1 a img{}
 .magazine .top{
   border-bottom: 2px solid #fff;
   padding-bottom: 15px;
@@ -199,14 +195,10 @@ section{}
 .magazine-wrap{height: 226px;display: inline-block;}
 
 .editorPick{float: left;}
-.editorPick a{}
-.editorPick a img{}
 .editorPick li:nth-of-type(1) a{font-size: 14px;font-weight: bold;color: #fff;text-decoration: none;}
 .editorPick li:nth-of-type(2) a{font-size: 20px;color: #fff;text-decoration: none;}
 
 .theItem{float: left;}
-.theItem a{}
-.theItem a img{}
 .theItem li:nth-of-type(1) a{font-size: 14px;font-weight: bold;color: #fff;text-decoration: none;}
 .theItem li:nth-of-type(2) a{font-size: 20px;color: #fff;text-decoration: none;}
 .theItem li a{}
@@ -214,7 +206,6 @@ section{}
 .everydayIcon{float: left;}
 .everydayIcon li:nth-of-type(1) a{font-size: 14px;font-weight: bold;color: #fff;text-decoration: none;}
 .everydayIcon li:nth-of-type(2) a{font-size: 20px;color: #fff;text-decoration: none;}
-.everydayIcon a img{}
 
 .theItem li:nth-of-type(3){padding-top: 50px;}
 .editorPick li:nth-of-type(3){padding-top: 50px;}
@@ -233,7 +224,6 @@ footer .sub-nav{
   transform: translateX(-50%);
   padding-top: 50px;
 }
-footer .sub-nav ul{}
 footer .sub-nav ul > li{font-size: 18px;text-decoration: none;}
 footer .sub-nav ul li:nth-child(1){padding-bottom: 20px;}
 footer .sub-nav ul li:nth-child(2){font-size: 16px;}
@@ -243,16 +233,10 @@ footer .sub-nav ul li:nth-child(5){font-size: 16px;}
 footer .sub-nav ul li a{color:#eee;}
 
 footer .sub-nav .category{float: left;padding-right: 310px;}
-footer .sub-nav .category li{}
-footer .sub-nav .category li a{}
 
 footer .sub-nav .customer{float: left;padding-right: 310px;}
-footer .sub-nav .customer li{}
-footer .sub-nav .customer li a{}
 
 footer .sub-nav .newsletter{float: left;}
-footer .sub-nav .newsletter li{}
-footer .sub-nav .newsletter li a{}
 footer .sub-nav .newsletter button{
   width: 90px;height: 30px; background: #fff;
   font-size: 16px;
@@ -388,7 +372,6 @@ header .center #btn-login div.popup-icon-shop dl.order button:nth-of-type(2){
   font-size: 15px;
 }
 .login-popup-hover .login-hover .popup-login div.login-form{}
-.popup-login div.login-form div p{}
 .popup-login div.login-form div:nth-child(1){}
 .popup-login div.login-form div:nth-child(2){}
 .popup-login div.login-form div:nth-child(1) .login{padding-bottom: 20px;}
