@@ -111,6 +111,7 @@ $(function(){
   //탭메뉴를 클릭하거나 포커스가 발생되면
   $('.t1 a, .t2 a').on('focus click',function(e){
     e.preventDefault();
+    $(this).parent().next().show();
     // 컨텐츠를 모두 숨기고
     $('.item1, .item2').hide();
     //내가 클릭한 a의 부모인 h2의 바로 다음에 오는 items를 보여준다.
@@ -118,13 +119,15 @@ $(function(){
 
     //탭의 이미지에 각각(each)접근해서 이미지의 값을 변경한다.
     //replace('바꿀대상', '새로운값')는 해당 문자열을 찾아 다른 값으로 변경할 때 사용.
-    $('#newbooks-news h2 img').each(function(){
-      $(this).attr('src',$(this).attr('src').replace('-1.jpg','.gif'));
-    })
+    // $('#newbooks-news h2 img').each(function(){
+    //   $(this).attr('src',$(this).attr('src').replace('-1.jpg','.gif'));
+    // })
 
     //this는 내가 선택한 a를 가리킨다. a의 자식 img를 선택해서 변수로 가지고 있는다.
-    $btnImg=$(this).children('img');
-    $btnImg.attr('src',$btnImg.attr('src').replace('.gif','-1.jpg'));
+    // $btnImg=$(this).children('img');
+    // $btnImg.attr('src',$btnImg.attr('src').replace('.gif','-1.jpg'));
   })
 
-})
+
+
+})//종료
