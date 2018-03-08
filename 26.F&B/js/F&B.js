@@ -64,8 +64,8 @@ $(function(){//시작
     $('.gnb-nav li ul').stop().show();
     $('.gnb-nav .nav-bg').stop().show();
   }).on('mouseleave focusout',function(){
-    $('.gnb-nav li ul').stop().hide();
-    $('.gnb-nav .nav-bg').stop().hide();
+    $('.gnb-nav li ul').stop().hide('fast');
+    $('.gnb-nav .nav-bg').stop().hide('fast');
   })
 
 })//종료

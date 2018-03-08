@@ -107,16 +107,13 @@ section{}
 .main-image .main-wrap .main img.mobile{display: none;}
 
 /* 슬라이드 이미지 */
-.slide-images{}
-.slide-wrap{}
 .product-slide{height: 530px;border-bottom: 1px solid #000;}
-.product-slide > *{}
 .product-slide .swiper-container{width: 1100px;}
-.product-slide .swiper-wrapper{}
-.swiper-wrapper .swiper-slide{width: 222px;}
+.swiper-wrapper .swiper-slide{text-align: center;}
 .swiper-wrapper .img-icon-wrap{
   position: relative;
   width: 222px;
+  display: inline-block;
 }
 .swiper-wrapper .swiper-slide div img.img{
   padding-top: 108px;
@@ -128,7 +125,7 @@ section{}
   bottom: 0;
   right: 0;
 }
-.swiper-wrapper .swiper-slide dl{text-align: center;width: 222px;}
+.swiper-wrapper .swiper-slide dl{text-align: center;}
 .swiper-wrapper .swiper-slide dl dt{font-size: 15px;}
 .swiper-wrapper .swiper-slide dl dd{font-size: 15px;}
 /* 원래있던 스와이퍼 아이콘 없앤다. */
@@ -195,22 +192,22 @@ section{}
 .magazine-wrap{height: 226px;display: inline-block;}
 
 .editorPick{float: left;}
-.editorPick li:nth-of-type(1) a{font-size: 14px;font-weight: bold;color: #fff;text-decoration: none;}
-.editorPick li:nth-of-type(2) a{font-size: 20px;color: #fff;text-decoration: none;}
+.editorPick ul li:nth-of-type(1) a{font-size: 14px;font-weight: bold;color: #fff;text-decoration: none;}
+.editorPick ul li:nth-of-type(2) a{font-size: 20px;color: #fff;text-decoration: none;}
 
 .theItem{float: left;}
-.theItem li:nth-of-type(1) a{font-size: 14px;font-weight: bold;color: #fff;text-decoration: none;}
-.theItem li:nth-of-type(2) a{font-size: 20px;color: #fff;text-decoration: none;}
-.theItem li a{}
+.theItem ul li:nth-of-type(1) a{font-size: 14px;font-weight: bold;color: #fff;text-decoration: none;}
+.theItem ul li:nth-of-type(2) a{font-size: 20px;color: #fff;text-decoration: none;}
+.theItem ul li a{}
 
 .everydayIcon{float: left;}
-.everydayIcon li:nth-of-type(1) a{font-size: 14px;font-weight: bold;color: #fff;text-decoration: none;}
-.everydayIcon li:nth-of-type(2) a{font-size: 20px;color: #fff;text-decoration: none;}
+.everydayIcon ul li:nth-of-type(1) a{font-size: 14px;font-weight: bold;color: #fff;text-decoration: none;}
+.everydayIcon ul li:nth-of-type(2) a{font-size: 20px;color: #fff;text-decoration: none;}
 
-.theItem li:nth-of-type(3){padding-top: 50px;}
-.editorPick li:nth-of-type(3){padding-top: 50px;}
-.everydayIcon li:nth-of-type(3){padding-top: 25px;}
-.magazine .magazine-wrap div li:nth-of-type(3) a{text-decoration: underline;color: #fff;font-size: 14px;}
+.theItem ul li:nth-of-type(3){padding-top: 50px;}
+.editorPick ul li:nth-of-type(3){padding-top: 50px;}
+.everydayIcon ul li:nth-of-type(3){padding-top: 25px;}
+.magazine .magazine-wrap div ul li:nth-of-type(3) a{text-decoration: underline;color: #fff;font-size: 14px;}
 
 
 /* footer */
