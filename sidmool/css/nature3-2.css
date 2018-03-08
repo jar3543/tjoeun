@@ -212,7 +212,7 @@ left: -250px;
 overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
 }
 .btn-nav ul{padding: 10px 0;}
-.btn-nav ul li a{color: #fff;text-decoration: none;font-size: 15px;padding-left: 20px;font-weight: 10px;}
+.btn-nav ul li a{color: #fff;text-decoration: none;font-size: 15px;padding-left: 20px;font-weight: bold;}
 .btn-nav ul li a:hover{color: #b0ee77;}
 #btn-menu:checked ~ nav{left: 0;}
 
@@ -325,9 +325,9 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
 .swiper-container{padding-top: 97px;padding-bottom: 100px;
   height: 290px !important;
 }
-.swiper-slide-main-text h2{color: #00800094;}
+.swiper-slide-main-text h2{color: #8ccc8c;}
 .swiper-slide-main-text p{padding-left: 20px;}
-.swiper-slide-main-text button{border: 1px solid #30ac6d99;border-left: 0;border-right: 0;background: #fff;}
+.swiper-slide-main-text button{border: 1px solid #abdc87;border-left: 0;border-right: 0;background: #fff;}
 .swiper-bg{display: none;}
 .swiper-bg a span{
   position: absolute;
@@ -336,9 +336,9 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
   color: #fff;
   background: rgba(0,0,0,0.5);}
 .swiper-slide .swiper-slide-text{padding: 0 50px;}
-.swiper-slide .swiper-slide-text h2{color: #00800094;}
+.swiper-slide .swiper-slide-text h2{color: #8ed08e;}
 .swiper-slide .swiper-slide-text p{font-size: 20px;padding: 5px 10px;color: #000;}
-.swiper-slide .swiper-slide-text button{border: 1px solid #30ac6d99;border-left: 0;border-right: 0;background: #fff;}
+.swiper-slide .swiper-slide-text button{border: 1px solid #abdc87;border-left: 0;border-right: 0;background: #fff;}
 
 /* 탭메뉴 & 데일리 추천 ====================================================*/
 .tab-section{
@@ -470,7 +470,7 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
   display: inline-block;
   float: right;
   top: -128px;
-  box-shadow: 10px 10px 10px #80808029;
+  box-shadow: 2px 3px 10px #000000;
   cursor: pointer;
 }
 .photo-images div{
