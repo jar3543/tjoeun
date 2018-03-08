@@ -22,11 +22,11 @@ body.intro h1{
 
 /* header ===============================================================*/
 header{
-  /* width: 1000px; */
-  /* margin: auto; */
+  width: 1100px;
+  margin: auto;
   position: relative;
-  /* height: 250px; */
-  z-index: 10000;
+  height: 220px;
+  z-index: 10;
 }
 /* 네비게이션 */
 header img{
@@ -175,7 +175,7 @@ nav, nav *{transition: all 0.5s;}
   left: 0;
   height: 30px;
   width: 25px;
-  z-index: 10;
+  z-index: 100;
   margin-top: 30px;
 }
 .btn-menu span{
@@ -187,9 +187,9 @@ nav, nav *{transition: all 0.5s;}
 }
 .btn-menu span:nth-child(1){bottom: 4px; top: auto;}
 .btn-menu span:nth-child(2){top: 50%; margin-top: -1px;}
-#btn-menu:checked + label span:nth-child(1){transform: rotate(-45deg);background: #fff;left: -38px;top: -4px;}
-#btn-menu:checked + label span:nth-child(2){opacity: 0;left: -43px;top: -14px;}
-#btn-menu:checked + label span:nth-child(3){transform: rotate(45deg);background: #fff;left: -37px;top: -25px;}
+#btn-menu:checked + label span:nth-child(1){position: fixed;transform: rotate(-45deg);background: #fff;left: 205px;top: 39px;}
+#btn-menu:checked + label span:nth-child(2){position: fixed;opacity: 0;left:200px;top:30px;}
+#btn-menu:checked + label span:nth-child(3){position: fixed;transform: rotate(45deg);background: #fff;left: 206px;top: 19px;}
 
 
 /* btn-nav */
@@ -208,14 +208,14 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
 .btn-nav ul{padding: 10px 0;}
 .btn-nav ul li a{color: #fff;text-decoration: none;font-size: 15px;padding-left: 20px;font-weight: bold;}
 .btn-nav ul li a:hover{color: #b0ee77;}
-#btn-menu:checked ~ nav{left: 0;}
+#btn-menu:checked ~ nav{left: 0;position: fixed;z-index: 10;}
 
 /* section ==============================================================*/
 /* 메인 스와이퍼 */
 .main{padding: 30px 0 !important;}
 .main i.icon-right-open{font-size: 20px;}
 .main-swiper{
-  background: #68936336 !important;
+  background: #d9ead7 !important;
   height: 290px !important;
   position: relative;
   top: -30px;
@@ -225,7 +225,7 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
   font-size: 20px;
   border-bottom: 1px solid gray;
   z-index: 10;
-  margin-left: 170px;
+  margin-left: 68px;
   color: gray;}
 .swiper-section{z-index: -1;position: relative;}
 .main .swiper-text{padding-left: 20px;}
@@ -244,7 +244,7 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
   display: inline-block;
   cursor: pointer;
   font-size: 24px;}
-#n-product .new-p-main-title h2::after{
+/* #n-product .new-p-main-title h2::after{
   content: '';
   display: inline-block;
   width: 1100px;
@@ -252,7 +252,7 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
   background: #000;
   bottom: -30px;
   left: 0;
-  position: absolute;}
+  position: absolute;} */
 #n-product .new-p-main-title a{
   font-size: 20px;
   color: #000;
@@ -300,11 +300,12 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
 .wrap_gallary{clear: both;background: #fff;}
 .wrap_gallary h1{
   background: #fff;
-  position: relative;
+  position: absolute;
   font-size: 24px;
-  padding-left: 210px;
+  top: -117%;
+  transform: translateX(-254%);
 }
-.wrap_gallary h1::after{
+/* .wrap_gallary h1::after{
   content: '';
   display: inline-block;
   width: 1100px;
@@ -315,7 +316,7 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
   margin-left: -97px;
   position: absolute;
   transform: translateX(50%);
-}
+} */
 .swiper-container{padding-top: 97px;padding-bottom: 100px;
   height: 290px !important;
 }
@@ -336,7 +337,7 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
 
 /* 탭메뉴 & 데일리 추천 ====================================================*/
 .tab-section{
-  height: 500px;
+  height: 443px;
   text-align: center;
   width: 1100px;
   margin: auto;
@@ -345,7 +346,13 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
 .t-d{height: 450px;}
 
 /* 라인 */
-#line{position: relative; float: left; width:470px;}
+#line{
+  position: relative;
+  float: left;
+  width:470px;
+  top: 40px;
+  height: 350px;
+}
 .t1{
   position: absolute;
   left: 0;
@@ -359,9 +366,10 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
 #line div h2{}
 #line .items{}
 .item1{}
-.item1 a.rss{display: inline-block; margin-top: 40px;}
+.item1 a.rss{display: inline-block; margin-top: 60px;}
 /* #t-d-content #line div .items .box{width: 500px;height: 300px;background: #dbecd7;} */
-#line1{}
+#line1{height: 0;}
+.img-wrap{width: auto;height: auto;}
 #line1 img{}
 #line1 p{}
 /* #t-d-content #line .items .box{} */
@@ -372,9 +380,9 @@ overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
   /* padding: 0 0 0 10px; */
 }
 .line-content h1:nth-child(3){clear: both;}
-
+.line-content h1 img{width: 100%;}
 /* 데일리 */
-#series{margin-top: 37px; padding-top: 40px;}
+#series{padding-top: 33px;}
 .tab-section .daily{display: inline-block;padding: 60px 100px 0px 100px;}
 .daily img{border: 15px solid #e2e0e0;}
 
