@@ -60,14 +60,12 @@ $(function(){//시작
   })
 
   // //네비게이션 focusin/focusout
-    $('.gnb-nav li a').on('focusin',function(){
-      $('.gnb-nav li ul').show();
-      $('.gnb-nav .nav-bg').show();
-    $('.gnb-nav li a').on('focusout',function(){
-      $('.gnb-nav li ul').hide();
-      $('.gnb-nav .nav-bg').hide();
-    })
+  $('.gnb-nav').on('mouseenter focusin',function(){
+    $('.gnb-nav li ul').stop().show();
+    $('.gnb-nav .nav-bg').stop().show();
+  }).on('mouseleave focusout',function(){
+    $('.gnb-nav li ul').stop().hide();
+    $('.gnb-nav .nav-bg').stop().hide();
   })
-
 
 })//종료
