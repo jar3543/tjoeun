@@ -1,0 +1,454 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+/* intro */
+.intro{
+  background: #fff;
+}
+body.intro h1{
+  color: #fff;
+  position: absolute;
+  top:50%; left:50%;
+  transform: translate(-50%, -50%);
+  background: #c6d9c6;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.intro small{position: absolute; bottom:30px; left:50%; transform: translateX(-50%);
+  width: 250px;text-align: center; color:#fff; font-size: 12px;}
+
+/* header */
+/* 네비게이션 */
+header h1{position: relative;left: 50%;padding-top:10px;
+/* transform: translateX(-50%); */
+color:#779470;
+}
+header nav{height: 170px;z-index: 1;}
+header nav .bgwrap .wrap{padding-top: 10px;text-align: center;height: 20px;position: relative;}
+header nav .bgwrap .wrap .nav{width: 1000px;left: 50%;position: absolute;transform: translateX(-50%);}
+header nav .bgwrap .wrap .nav li{float: left;}
+header nav .bgwrap .wrap .nav > li > a{
+  display: block;
+  position: relative;
+  font-size: 20px;
+  margin: 0 35px 10px;
+  color: #333;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  perspective: 500px;
+  background: #fff;
+}
+header nav .bgwrap .wrap .nav li:hover > a{background: #fff;}
+/* 마우스 오버 시, 빨간밑줄(a) */
+/* > 으로 요소를 선택해야 각 a요소 마다 빨간 밑줄을 적용시킬 수 있음 */
+header nav .bgwrap .wrap .nav > li > a::after{
+  content: '';position: absolute;width: 0%;height: 5px;background: green; bottom: 0px;
+  left: 50%; transform: translate(-50%);
+  transition: all 0.5s;
+}
+header nav .bgwrap .wrap .nav li.active > a::after,
+header nav .bgwrap .wrap .nav li:hover > a::after{width: 100%;}
+
+  /* 통합검색 */
+header nav .bgwrap .wrap .nav #btn-search-open{position: absolute;margin-left: 90px;font-size: 20px;}
+header nav .bgwrap .wrap .nav form{display: none;}
+header nav .bgwrap .wrap .nav form input{idth: 200px;height: 40px;border: 1px solid #333;
+box-sizing: border-box;padding: 0 40px 0 10px;}
+header nav .bgwrap .wrap .nav form .icon-search{position: absolute;right: 5px;top: 10px;font-size: 20px;}
+/* 회전효과(영문메뉴를 한글메뉴로 바꾸기)(span요소가 필요) */
+header nav .nav > li > a span:nth-child(1){position: relative;transform: rotateX(0deg);}
+header nav .nav > li.active > a span:nth-child(1),/*스크립트 적용:클릭 (active)될 때*/
+header nav .nav > li:hover > a span:nth-child(1){transform: rotateX(180deg);color: #fff;/*회전할 때 영문 컬러를 흰색으로*/}
+header nav .nav > li > a span{
+  backface-visibility: hidden;
+  display: block;
+}/* 마우스 오버 시 없어지는 효과 적용 */
+/* 마우스 오버 시 보이는 메뉴 */
+/* position: absolute --> 영문메뉴가 없어지면서 active,hover 시, 겹침효과로 인해 한글메뉴가 보임  */
+header nav .nav > li > a span.ko{
+  transform: rotateX(180deg);
+  position: absolute;left: 0px; top: 0;
+  color: green;
+  /*영문메뉴로 바뀔 때, 빨간밑줄을 가운데정렬한다.*/
+  width: 100%;
+  text-align: center;
+}
+header nav .nav > li.active > a span.ko,
+header nav .nav > li:hover > a span.ko{transform: rotateX(0deg);}
+/* 영문 메뉴 빨간 밑줄 개별 수정 */
+header nav .nav > li.active:nth-child(2) > a::after,
+header nav .nav > li.hover:nth-child(2) > a::after{width: 30%;text-align: center;}
+
+/* 2depth */
+header nav .nav li ul{
+  display: none;
+}
+/* 부트스트랩 서브메뉴 */
+.dropdown-menu{border: 1px solid #000;}
+.dropdown-menu:hover{}
+.dropdown-menu li:hover a{color: green;}
+.dropdown-menu li a{padding-right: 70px;}
+
+/* section */
+section{z-index: -1;position: relative;}
+/* gallary */
+section .bg_story{height: 800px;position: relative;}
+.wrap_story{
+  height: 680px;
+  background: #dbecd7;
+}
+/* section .bg_story .wrap_story{padding-top: 100px;} */
+/* .bg_story h1{position: relative; text-align: center;font-size: 24px;} */
+/* .bg_story h1::after{
+content: ''; display: inline-block;
+width: 200px; height: 1px; background: #000;
+bottom: -30px;
+left: 50%;
+margin-left: -97px;
+position: absolute;} */
+.bg_story ul.story{position: relative;padding-top: 100px;}
+.bg_story ul.story li{width: 33.3%;float: left;}
+/*마우스 오버 시, img커지는 효과*/
+.bg_story ul.story li a{display: block;overflow: hidden;height: 470px;}
+.bg_story ul.story li a img{width: 100%;transition: transform 0.5s;}
+.bg_story ul.story li a:hover img{transform: scale(1.2);}
+.story span{font-size: 50px;position: absolute;}
+.story span strong{color: #4e604e;}
+.story span:nth-of-type(1){
+  padding-right: 70px;
+  padding-left: 40px;
+  color: #407640;
+  padding-top: 150px;
+}
+.story span:nth-of-type(2){
+  color: #407640;
+  padding-left: 20px;
+  padding-top: 215px;
+}
+/* 스와이퍼 */
+/* 갤러리 */
+.wrap_gallary{clear: both;background: #fff;}
+.wrap_gallary h1{background: #fff;position: relative; text-align: center;font-size: 24px;}
+.wrap_gallary h1::after{
+  content: ''; display: inline-block;
+  width: 200px; height: 1px; background: #000;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -97px;
+  position: absolute;
+}
+.swiper-container{padding-top: 97px;padding-bottom: 100px;}
+.swiper-bg{display: none;}
+.swiper-bg a span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background: rgba(0,0,0,0.5);}
+
+/* 포토후기 */
+.section-photo{height: 1000px;background: #fff;}
+.photo-wrap{height: 1000px;}
+.photo-wrap h1{font-weight: bold;font-size: 50px;
+  position: relative;display: inline-block;padding-top: 100px;}
+.photo-wrap h1::after{
+  content: '';
+  display: inline-block;
+  background:#000;
+  width: 300px;
+  height: 2px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;}
+.photo-wrap h4{
+  font-size: 20px;
+  position: relative;
+  top: 40px;
+  padding-left: 100px;}
+.mouseover_photo{padding-top: 80px;background: #dbecd7;}
+.photo-images{
+  width: 600px;
+  height: 600px;
+  position: relative;
+  margin: auto;
+}
+.photo-images ul{
+  position: relative;
+  text-align: center;
+}
+.photo-images ul div{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  float: left;
+}
+.photo-images ul div:nth-child(1) a{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.photo-images ul div:nth-child(2) a{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+.photo-images ul div:nth-child(3) a{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 300px;
+  left: 0;
+}
+.photo-images ul div:nth-child(4) a{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+}
+.photo-images ul div a i{
+  color: #fff;
+  font-size: 30px;
+}
+.photo-images div:nth-child(1) a i{
+  background: rgba(255, 255, 255, 0.62);
+  padding: 100px;
+  position: relative;
+  top: 150px;
+  color: #000;
+}
+.photo-images div:nth-child(2) a i{
+  /* background: rgba(255, 255, 255, 0.62);
+  padding: 100px; */
+  position: relative;
+  top: 50px;
+  color: #000;
+  right: -300px;
+}
+.photo-images div:nth-child(3) a i{
+  /* background: rgba(255, 255, 255, 0.62);
+  padding: 100px; */
+  position: relative;
+  top: 350px;
+  color: #000;
+}
+.photo-images div:nth-child(4) a i{
+  /* background: rgba(255, 255, 255, 0.62); */
+  /* padding: 100px; */
+  position: relative;
+  top: 450px;
+  color: #000;
+  right: -300px;
+}
+.photo-images div:nth-child(1) a i,
+.photo-images div:nth-child(2) a i,
+.photo-images div:nth-child(3) a i,
+.photo-images div:nth-child(4) a i{
+  display: none;
+}
+
+/* .sns-images div:nth-child(1):hover a{
+  display: block;opacity: 1;
+} */
+
+
+.photo-images ul div img{
+  width: 100%;
+}
+
+/* =========================================================================== */
+/* sns */
+.section-sns{height: 1000px;background: #fff;}
+.sns-wrap{height: 1000px;}
+.sns-wrap h1{font-weight: bold;font-size: 50px;
+  position: relative;display: inline-block;padding-top: 100px;}
+.sns-wrap h1::after{
+  content: '';
+  display: inline-block;
+  background:#000;
+  width: 300px;
+  height: 2px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;}
+.sns-wrap h4{
+  font-size: 20px;
+  position: relative;
+  top: 40px;
+  padding-left: 100px;}
+.mouseover_sns{padding-top: 80px;background: #dbecd7;}
+.sns-images{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: auto;
+}
+.sns-images ul{
+  position: relative;
+  text-align: center;
+}
+.sns-images ul div{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  float: left;
+}
+.sns-images ul div:nth-child(1) a{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sns-images ul div:nth-child(2) a{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+.sns-images ul div:nth-child(3) a{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 300px;
+  left: 0;
+}
+.sns-images ul div:nth-child(4) a{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+}
+.sns-images ul div a i{
+  color: #fff;
+  font-size: 30px;
+}
+.sns-images div:nth-child(1) a i{
+  background: rgba(255, 255, 255, 0.62);
+  padding: 50px;
+  position: relative;
+  top: 90px;
+  color: #000;
+  left: -50px;
+}
+.sns-images div:nth-child(2) a i{
+  position: relative;
+  top: 90px;
+  color: #000;
+  /* left: -153px; */
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.62);
+}
+.sns-images div:nth-child(3) a i{
+  /* background: rgba(255, 255, 255, 0.62);
+  padding: 100px; */
+  position: relative;
+  top: 350px;
+  color: #000;
+}
+.sns-images div:nth-child(4) a i{
+  /* background: rgba(255, 255, 255, 0.62); */
+  /* padding: 100px; */
+  position: relative;
+  top: 450px;
+  color: #000;
+  right: -300px;
+}
+.sns-images div:nth-child(1) a i,
+.sns-images div:nth-child(2) a i,
+.sns-images div:nth-child(3) a i,
+.sns-images div:nth-child(4) a i{
+  display: none;
+}
+
+/* .sns-images div:nth-child(1):hover a{
+  display: block;opacity: 1;
+} */
+
+
+.sns-images ul div img{
+  width: 100%;
+}
+
+
+
+/* footer */
+footer{height: 300px; background: #333; color:#777; font-size: 13px; text-align: center;}
+footer .citemap{position: relative;}
+footer .sub-citemap{
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);}
+footer .citemap .sns{
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);}
+footer .sns li{float: left; padding: 0 15px;}
+footer .sns li button{color:#fff; font-size: 30px; transition: 0.5s;}
+/* transition: color 0.5s; --> 색깔 바뀌는 속도 적용 시 */
+footer .sns li button.icon-facebook:hover{font-size:40px; }
+footer .sns li button.icon-twitter:hover{font-size:40px;}
+footer .sns li button.icon-youtube-play:hover{font-size:40px;}
+footer p{padding-top: 190px;}
+
+/* popup */
+.popup{display: none;}
+
+/* 스와이퍼 =================================================================*/
+html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      height: auto;
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+/* 부트스트랩     */
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{background-color: #fff;}
+/* 미디어쿼리================================================================= */
