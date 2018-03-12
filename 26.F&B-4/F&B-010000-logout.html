@@ -25,13 +25,12 @@
         <h1><a href="#"><img src="images/logo.jpg" alt="F&B logo"></a></h1>
         <!-- 로그인 -->
         <div id="btn-login">
-          <button type="button" class="textchange">로그인/회원가입</button>
+          <button type="button" class="textchange">로그아웃</button>
           <button type="button" class="icon icon-heart"><span>즐겨찾기</span></button>
           <button type="button" class="icon icon-shopping-bag"><span title="장바구니 목록 수">(12)</span></button>
           <!-- 쇼핑백 팝업 -->
           <div class="popup-hover">
             <div class="shop-hover">
-              <button class="icon icon-cancel"><span class="skip">닫기</span></button>
               <div class="popup-icon-shop">
                 <div>
                   <img src="images/main-img1.jpg" alt="">
@@ -71,12 +70,11 @@
           <!-- 쇼핑백이 비어있을 때 팝업 -->
 
           <!-- 로그인/회원가입 팝업 -->
+          <form class="popup-login-form-wrap" action="F&B-010000-1.html" method="post">
           <!-- <form action="데이터를 전달할 곳" method="get 또는 post"> -->
-            <div class="login-popup-wrap">
-              <button class="icon icon-cancel"><span class="skip">닫기</span></button>
-              <!-- <div class="login-hover"> -->
-              <div class="popup-login">
-                <form class="popup-login-form-wrap" action="F&B-010000-logout.html" method="post">
+            <div class="login-popup-hover">
+              <div class="login-hover">
+                <div class="popup-login">
                   <!-- 로그인 -->
                   <h1>로그인</h1>
                   <!-- 로그인폼 -->
@@ -86,13 +84,15 @@
                       <input type="text" id="id" title="아이디" class="login">
                     </div>
                     <div>
+                    <div>
                       <label for="password">*비밀번호</label>
                       <input type="text" id="password" title="비밀번호" class="password">
                     </div>
-                  </div>
-                  <div class="login-option">
-                    <!-- 체크박스 -->
-                    <label><input type="checkbox" title="체크박스">로그인 상태 유지</label>
+                    </div>
+                    <div class="login-option">
+                      <!-- 체크박스 -->
+                      <label><input type="checkbox" title="체크박스">로그인 상태 유지</label>
+                    </div>
                     <p>비밀번호를 잊으셨나요?</p>
                   </div>
                   <!-- 버튼 -->
@@ -101,14 +101,15 @@
                     <!-- <p></p> -->
                     <button type="submit">회원가입</button>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
+          </form>
+          <!-- 팝업 백그라운드 -->
+          <div class="popup-bg"></div>
           <!-- 팝업 end -->
         </div>
       </div>
-      <!-- 로그인 ~ 쇼핑백 end -->
-
       <!-- 로그아웃과 네비 -->
       <nav>
         <div class="logout-form" style="display:none;">

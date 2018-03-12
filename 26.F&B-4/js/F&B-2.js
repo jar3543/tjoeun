@@ -57,34 +57,64 @@ $(function(){//시작
   // }).resize();
 
   // 로그인팝업
-  $('.login-hover').on('click',function(){
-    // console.log('로그인팝업열기')
-    $('.popup-login, .popup-bg').stop().show();
-      // 로그인팝업닫기
-      $('.popup-login').on('mouseleave',function(){
-        // console.log('로그인팝업닫기')
-        //열려있는 팝업을 닫고 팝업백그라운드 제거
-        $('.popup-login').stop().slideUp(function(){$('.popup-bg').hide()});
-        // alert('닫기');
-      })
-  })
+  // $('.login-hover').on('click',function(){
+  //   // console.log('로그인팝업열기')
+  //   $('.popup-login, .popup-bg').stop().show();
+  //     // 로그인팝업닫기
+  //     $('.popup-login').on('mouseleave',function(){
+  //       // console.log('로그인팝업닫기')
+  //       //열려있는 팝업을 닫고 팝업백그라운드 제거
+  //       $('.popup-login').stop().slideUp(function(){$('.popup-bg').hide()});
+  //       // alert('닫기');
+  //     })
+  // })
 
   //쇼핑백 팝업
-  $('.icon-shop').on('click',function(){
-    // console.log('쇼핑백팝업열기')
-    $('.popup-icon-shop, .popup-bg').stop().show();//css로적용시킨것
+  // $('.icon-shop').on('click',function(){
+  //   // console.log('쇼핑백팝업열기')
+  //   $('.popup-icon-shop, .popup-bg').stop().show();//css로적용시킨것
+  //
+  //     //쇼핑백 팝업닫기
+  //     $('.popup-hover').on('mouseleave',function(){
+  //       // console.log('쇼핑백팝업닫기')
+  //       $('.popup-icon-shop').stop().slideUp(function(){$('.popup-bg').hide()});
+  //     })
+  // })
 
-      //쇼핑백 팝업닫기
-      $('.popup-hover').on('mouseleave',function(){
-        // console.log('쇼핑백팝업닫기')
-        $('.popup-icon-shop').stop().slideUp(function(){$('.popup-bg').hide()});
-      })
+  // 로그인 팝업 열기
+  $('.textchange').on('click',function(){
+    $('.popup-login-form-wrap, .icon.icon-cancel').show();
+    // console.log('open');
+    // $('body').append('<div class="popup-bg"></div>');
+  })
+  // 로그인 팝업 닫기
+  $('.icon.icon-cancel').on('click',function(){
+    $('.popup-login-form-wrap, .icon.icon-cancel').hide();
+    // console.log('close');
+    // 열려있는 팝업을 닫고 팝업백그라운드 제거
+    // $('.popup').slideUp(function(){$('.popup-bg').remove()});
   })
 
+  // 쇼핑백 팝업 열기
+  $('.icon.icon-shopping-bag').on('click',function(){
+    $('.popup-icon-shop, .icon.icon-cancel').show();
+    console.log('open');
+  })
+  // 쇼핑백 팝업 닫기
+  $('.icon.icon-cancel').on('click',function(){
+    $('.popup-icon-shop, .icon.icon-cancel').hide();
+    console.log('close');
+  })
+
+
+
+
+
+  // 로그아웃 화면
   //로그인/회원가입 -> My page 로그아웃 (text바꾸기)
   $('.black').on('click',function(){
     $('.textchange').text('My page 로그아웃');
-    alert('로그아웃');
+    // alert('로그아웃');
   })
 
   // //네비게이션 focusin/focusout
