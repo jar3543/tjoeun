@@ -2,31 +2,59 @@ $(function(){//시작
   var $devWidth;
   var $limitSize=767;
 
-  $(window).resize(function(){
-    $devWidth=$('body').width();
-    console.log($devWidth);
-    if($devWidth<$limitSize){//모바일
-      // 상품 갤러리 슬라이드
-      productSlide=new Swiper('.product-slide',{
-        navigation:{
-          nextEl:'.product-slide .swiper-button-next',
-          prevEl:'.product-slide .swiper-button-prev',
-        },
-        slidesPerView:2,
-        loop:true,
-      });
-    }else{
-      // 상품 갤러리 슬라이드
-      productSlide=new Swiper('.product-slide',{
-        navigation:{
-          nextEl:'.product-slide .swiper-button-next',
-          prevEl:'.product-slide .swiper-button-prev',
-        },
-        slidesPerView:3,
-        loop:true,
-      });
-    }
-  }).resize();
+  deskTopSlide=new Swiper('.desktop-slide',{
+    navigation:{
+      nextEl:'.desktop-slide .swiper-button-next',
+      prevEl:'.desktop-slide .swiper-button-prev',
+    },
+    slidesPerView:3,
+    loop:true,
+  });
+
+  mobileSlide1=new Swiper('.mobile-slide1',{
+    navigation:{
+      nextEl:'.mobile-slide1 .swiper-button-next',
+      prevEl:'.mobile-slide1 .swiper-button-prev',
+    },
+    slidesPerView:2,
+    loop:true,
+  });
+
+  mobileSlide2=new Swiper('.mobile-slide2',{
+    navigation:{
+      nextEl:'.mobile-slide2 .swiper-button-next',
+      prevEl:'.mobile-slide2 .swiper-button-prev',
+    },
+    slidesPerView:2,
+    loop:true,
+  });
+
+  // $(window).resize(function(){
+  //   $devWidth=$('body').width();
+  //   console.log($devWidth);
+  //   if($devWidth<$limitSize){//모바일
+  //     // 상품 갤러리 슬라이드
+  //     productSlide=new Swiper('.product-slide',{
+  //       navigation:{
+  //         nextEl:'.product-slide .swiper-button-next',
+  //         prevEl:'.product-slide .swiper-button-prev',
+  //       },
+  //       slidesPerColumn: 2,
+  //       slidesPerView:2,
+  //       loop:true,
+  //     });
+  //   }else{
+  //     // 상품 갤러리 슬라이드
+  //     productSlide=new Swiper('.product-slide',{
+  //       navigation:{
+  //         nextEl:'.product-slide .swiper-button-next',
+  //         prevEl:'.product-slide .swiper-button-prev',
+  //       },
+  //       slidesPerView:3,
+  //       loop:true,
+  //     });
+  //   }
+  // }).resize();
 
   // 로그인팝업
   $('.login-hover').on('click',function(){
