@@ -11,9 +11,9 @@
             top: 200
         }
     });
-    
+
     new WOW().init();
-    
+
     $('a.page-scroll').bind('click', function(event) {
         var $ele = $(this);
         $('html, body').stop().animate({
@@ -21,14 +21,21 @@
         }, 1450, 'easeInOutExpo');
         event.preventDefault();
     });
-    
-    $('.navbar-collapse ul li a').click(function() {
-        /* always close responsive nav after click */
-        $('.navbar-toggle:visible').click();
+
+    // $('.navbar-collapse ul li a').click(function() {
+    //     /* always close responsive nav after click */
+    //     $('.navbar-toggle:visible').click();
+    // });
+
+    // $('#galleryModal').on('show.bs.modal', function (e) {
+    //    $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
+    // });
+    //포트폴리오 사이트 링크걸기
+
+    $('icon-lg.ion-ios-search').on('click',function(){
+      location.href='F&B-010000.html';
+      console.log('open');
     });
 
-    $('#galleryModal').on('show.bs.modal', function (e) {
-       $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
-    });
 
 })(jQuery);

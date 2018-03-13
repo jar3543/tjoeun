@@ -29,6 +29,7 @@ box-sizing: border-box;padding: 0 40px 0 10px;border-top: 0;border-left: 0;borde
 /* #btn-search .mobile{display: none;} */
 
 /* 네비게이션 */
+#togglemenu{display: none;}
 header{border-bottom: 1px solid #000;}
 header nav{height: 90px;}
 /* 1depth */
@@ -602,12 +603,11 @@ footer p{padding: 440px 0 0 20px;font-size: 10px;}
 
         /* 네비메뉴 토글 */
         #togglemenu{
-          display: none;
-          /* display: block; */
-          /* opacity: 1; */
-          /* position: absolute; */
-          /* top: 12px; */
-          /* font-size: 40px; */
+          display: block;
+          opacity: 1;
+          position: absolute;
+          top: 12px;
+          font-size: 25px;
         }
         /* 검색 */
         #btn-search{

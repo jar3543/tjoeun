@@ -1,5 +1,17 @@
+/* skill */
 .skill-img-wrap{width: 20%;}
 .skill-img-wrap img{width: 100%;}
+/* profile */
+ul.text-muted, .text-muted li{list-style-type: none;}
+/* 포트폴리오 */
+.gallery-box-content p{color: #fff;line-height: 0;}
+.gallery-box-content p:nth-of-type(1){padding-top: 10px;}
+
+/* footer */
+.pull-right{font-size: 25px;width: 100%;}
+footer .container-fluid .footer-textalign{text-align: center;}
+
+
 
 .contact-bg{
   background: url(../assets/contact-post7.png) no-repeat center;
@@ -66,6 +78,7 @@ p {
     font-size: 17px;
     line-height: 1.7;
     margin-bottom: 20px;
+    color: #000;
 }
 
 .wide-space {
@@ -327,7 +340,7 @@ footer {
     }
 
     section {
-        min-height: 600px;
+        /* min-height: 600px; */
         padding: 100px 0;
     }
 
@@ -361,6 +374,7 @@ textarea {
 
 .margin-top-0 {
     margin-top: 0;
+    color: #000;
 }
 
 .feature {
