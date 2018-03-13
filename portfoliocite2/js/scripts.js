@@ -32,7 +32,7 @@
     // });
     //포트폴리오 사이트 링크걸기
 
-    $('icon-lg.ion-ios-search').on('click',function(){
+    $('glyphicon.glyphicon-link').on('click',function(){
       location.href='F&B-010000.html';
       console.log('open');
     });
