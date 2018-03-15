@@ -227,7 +227,7 @@ section{}
 /* footer */
 footer{height: 600px; background: #000; color:#777; font-size: 13px; text-align: center;}
 footer .center{height: 600px;}
-footer .center h1{display: none;}
+/* footer .center .sub-nav h1{display: none;} */
 footer .center small{}
 footer .center img{
   position: absolute;
@@ -243,13 +243,13 @@ footer .sub-nav{
   transform: translateX(-50%);
   padding-top: 50px;
 }
-footer .sub-nav ul > li{font-size: 18px;text-decoration: none;}
-footer .sub-nav ul li:nth-child(1){padding-bottom: 20px;}
-footer .sub-nav ul li:nth-child(2){font-size: 16px;}
-footer .sub-nav ul li:nth-child(3){font-size: 16px;}
-footer .sub-nav ul li:nth-child(4){font-size: 16px;}
-footer .sub-nav ul li:nth-child(5){font-size: 16px;}
-footer .sub-nav ul li a{color:#eee;}
+footer .sub-nav ul > li, footer .sub-nav ul > li div li{font-size: 18px;text-decoration: none;}
+footer .sub-nav ul > li:nth-child(1){padding-bottom: 20px;}
+footer .sub-nav ul div li:nth-child(1){font-size: 16px;}
+footer .sub-nav ul div li:nth-child(2){font-size: 16px;}
+footer .sub-nav ul div li:nth-child(3){font-size: 16px;}
+footer .sub-nav ul div li:nth-child(4){font-size: 16px;}
+footer .sub-nav ul li div li a, footer .sub-nav ul li a{color:#eee;}
 footer .sub-nav ul li span{display: none;}
 
 footer .sub-nav .category{float: left;padding-right: 310px;}
@@ -260,6 +260,8 @@ footer .sub-nav .newsletter li button{
   font-weight: bold;
   margin-top: 20px;
 }
+footer .center .sub-nav #accordion{display: none;}
+/* footer #accordion, footer .mobile-skip{display: none;} */
 
 footer .sns{position: absolute; top: 310px; left: 50%; transform: translateX(-50%);}
 footer .sns li{float: left; padding: 0 15px;}
@@ -555,14 +557,35 @@ footer p{padding: 440px 0 0 20px;font-size: 10px;}
   /* 하단 푸터 드롭다운 카데고리/고객센터 */
   footer .center{height: 720px;}
   footer .center h1{display: block;color: #fff;font-size: 22px;}
-  footer .sub-nav .category, .customer{display: none;}
+  /* footer .sub-nav .category, .customer{display: none;} */
   footer .sub-nav ul li span{display: block;font-size: 18px;}
-  footer .sub-nav .category{}
-  footer .sub-nav .customer{}
+  footer .sub-nav .category{
+    float: none;
+    width: 100%;
+    height: 146px;
+    padding: 0;}
+  footer .sub-nav .customer{
+    float: none;
+    width: 100%;
+    height: 146px;
+    padding: 0;
+}
   footer .sub-nav .newsletter{width: 100%;padding: 25px;box-sizing: border-box;}
-  footer .sub-nav ul li a{font-size: 22px;}
+  footer .sub-nav ul div li a{font-size: 22px;}
   footer .sub-nav .newsletter li button{width: 100%;height: 40px;}
   footer .sub-nav{width: 100%;}
+
+  /* 드롭다운 수정한 부분 */
+  /* .category, .customer{display: none;} */
+  #accordion{margin: auto;height: auto;}
+  /* #accordion ul{border: 1px solid #000;} */
+
+  #accordion ul div li:nth-child(1){
+    border-bottom: 1px solid #92aeb6;}
+
+  #accordion ul div li .box{background: #a7a7a5;display: none;}
+  #accordion ul div li .box.active{background: #a7a7a5;display: block;}
+
 
   .sns{
     position: static;

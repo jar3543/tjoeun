@@ -245,11 +245,11 @@
 
       <!-- quick bar -->
       <input type="checkbox" id="btn-menu">
-      <label for="btn-menu" class="btn-menu">
+      <button for="btn-menu" class="btn-menu">
         <span></span>
         <span></span>
         <span></span>
-      </label>
+      </button>
       <!-- quick bar menu -->
       <nav class="btn-nav">
         <ul class="menulist">
@@ -623,6 +623,18 @@
       // e링크 이벤트 제거
       e.preventDefault();
     })
+
+    // quick bar
+    $('.btn-menu').on('click',function(){
+      console.log('click');
+      // $('nav.btn-nav').css('display','block');
+      $('.btn-nav ul').show();
+      console.log('show');
+    })
+    // $('.btn-menu span').on('click',function(){
+    //   $('.btn-nav').hide();
+    // })
+
 
     //메인 스와이퍼 이미지 & 갤러리 마우스오버/마우스아웃 시
     var swiper = new Swiper('.main');

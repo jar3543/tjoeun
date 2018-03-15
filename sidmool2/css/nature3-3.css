@@ -188,9 +188,9 @@ nav, nav *{transition: all 0.5s;}
 }
 .btn-menu span:nth-child(1){bottom: 4px; top: auto;}
 .btn-menu span:nth-child(2){top: 50%; margin-top: -1px;}
-#btn-menu:checked + label span:nth-child(1){position: fixed;transform: rotate(-45deg);background: #fff;left: 205px;top: 39px;}
+/* #btn-menu:checked + label span:nth-child(1){position: fixed;transform: rotate(-45deg);background: #fff;left: 205px;top: 39px;}
 #btn-menu:checked + label span:nth-child(2){position: fixed;opacity: 0;left:200px;top:30px;}
-#btn-menu:checked + label span:nth-child(3){position: fixed;transform: rotate(45deg);background: #fff;left: 206px;top: 19px;}
+#btn-menu:checked + label span:nth-child(3){position: fixed;transform: rotate(45deg);background: #fff;left: 206px;top: 19px;} */
 
 
 /* btn-nav */
@@ -204,7 +204,8 @@ z-index: 2;
 padding-top: 95px;
 /* 숨김 */
 left: -250px;
-overflow-y:auto;/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
+overflow-y:auto;
+/*네비게이션의 높이를 넘을 경우 스크롤 발생*/
 }
 .btn-nav ul{padding: 10px 0;}
 .btn-nav ul li{line-height: 30px;}
